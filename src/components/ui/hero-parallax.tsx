@@ -8,7 +8,6 @@ import {
   MotionValue,
 } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 
 export const HeroParallax = ({
   products,
@@ -101,9 +100,9 @@ export const HeroParallax = ({
   );
 };
 
-export const Header = () => {
+export const Header: React.FC = () => {
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
+    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
       <h1 className="text-4xl md:text-8xl font-bold text-white">
         Extechnology
       </h1>
@@ -111,11 +110,13 @@ export const Header = () => {
         Extechnology offering is dedicated to delivering advanced IT solutions,
         including web development, e-commerce platforms, Web & WhatsApp
         Chatbots, and Mobile applications, ensuring comprehensive support of our
-        client's digital needs.
+        client&apos;s digital needs.
       </p>
     </div>
   );
 };
+
+
 
 export const ProductCard = ({
   product,
@@ -139,10 +140,7 @@ export const ProductCard = ({
       key={product.title}
       className="group/product h-96 w-[30rem] relative flex-shrink-0"
     >
-      <Link
-        href={'#'}
-        className="block group-hover/product:shadow-2xl "
-      >
+      <div className="block group-hover/product:shadow-2xl ">
         <Image
           src={product.thumbnail}
           height="600"
@@ -150,7 +148,7 @@ export const ProductCard = ({
           className="object-cover object-left-top absolute h-full w-full inset-0"
           alt={product.title}
         />
-      </Link>
+      </div>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
         {product.title}

@@ -5,6 +5,7 @@ import { IoHomeOutline } from "react-icons/io5";
 import { IoIosContact } from "react-icons/io";
 import { FaHandsHelping } from "react-icons/fa";
 import { FaCircleInfo } from "react-icons/fa6";
+import Image from "next/image";
 
 function SideNavbar() {
   return (
@@ -12,7 +13,7 @@ function SideNavbar() {
       <div className="flex flex-col content-between pr-8 ">
         <div>
           <Link href={"/"}>
-            <img src="/EX_TECHNOLOGY_LOGO-01.png" alt="" className="w-24" />
+            <Image src="/EX_TECHNOLOGY_LOGO-01.png" alt="" height={100} width={100} />
           </Link>
         </div>
         <div className="relative top-30 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full py-8">

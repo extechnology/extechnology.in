@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "next-themes";
+import  SideNavbar  from "@/components/Header/SideNavbar";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import BottomNavbar from "@/components/Header/BottomNav";
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +33,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <main>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            themes={["dark", "light", "warm"]}
+          >
+            <SideNavbar />
+            {children}
+            <BottomNavbar/>
+          </ThemeProvider>
+        </main>
       </body>
     </html>
   );

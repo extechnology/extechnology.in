@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { FaMoon } from "react-icons/fa";
-import { CiLight } from "react-icons/ci";
 import { IoHomeOutline } from "react-icons/io5";
 import { IoIosContact } from "react-icons/io";
 import { FaHandsHelping } from "react-icons/fa";

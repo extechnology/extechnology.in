@@ -1,6 +1,6 @@
 "use client";
 
-import { Home, Info, HandHelping, User,Moon,SunMedium } from "lucide-react";
+import { Home, Info, HandHelping, User,Moon } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -17,7 +17,7 @@ export default function BottomNavbar() {
   const [active, setActive] = useState(1);
 
   return (
-    <div className="md:hidden fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-md bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-4 py-2 flex justify-between items-center shadow-lg">
+    <div className="md:hidden fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-md bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-4 py-4 flex justify-between items-center shadow-lg">
       {navItems.map((item) => (
         <Link
           key={item.id}
@@ -29,7 +29,7 @@ export default function BottomNavbar() {
             animate={
               active === item.id ? { y: -5, scale: 1.2 } : { y: 0, scale: 1 }
             }
-            className="p-2"
+            className="p-1"
           >
             {item.icon}
           </motion.div>

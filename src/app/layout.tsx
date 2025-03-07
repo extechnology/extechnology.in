@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import  SideNavbar  from "@/components/Header/SideNavbar";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import BottomNavbar from "@/components/Header/BottomNav";
+import Footer from "@/components/footer/Footer";
 
 
 
@@ -42,6 +43,7 @@ export default function RootLayout({
             <SideNavbar />
             {children}
             <BottomNavbar/>
+            <Footer/>
           </ThemeProvider>
         </main>
       </body>

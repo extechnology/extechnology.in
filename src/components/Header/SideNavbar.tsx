@@ -9,29 +9,29 @@ import Image from "next/image";
 
 function SideNavbar() {
   return (
-    <div className="fixed z-10 right-0 top-1/12 h-screen hidden md:block">
-      <div className="flex flex-col content-between pr-8 ">
+    <div className="fixed  z-10 right-0 top-1/12 h-screen hidden md:flex justify-center">
+      <div className="flex flex-col content-between ">
         <div>
           <Link href={"/"}>
-            <Image src="/EX_TECHNOLOGY_LOGO-01.png" alt="" height={100} width={100} />
+            <Image src="/EX_TECHNOLOGY_LOGO-01.png" alt="" height={100} width={100} className="relative right-5"/>
           </Link>
         </div>
-        <div className="relative top-30 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full py-8">
+        <div className="relative top-30 right-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full py-7 w-3/4">
           <ul className="flex flex-col gap-6 justify-center items-center">
             <li>
-              <IoHomeOutline className="text-xl text-zinc-200 shadow-lg backdrop-blur-2xl rounded-full w-12 h-12 hover:scale-110 hover:-translate-x-7 duration-300 p-2 text-center" />
+              <IoHomeOutline className="text-xl text-zinc-200 shadow-lg backdrop-blur-2xl rounded-full w-10 h-10 hover:scale-110 hover:-translate-x-2 duration-300 p-2 text-center" />
             </li>
             <li>
-              <FaCircleInfo className="text-xl text-zinc-200 shadow-lg backdrop-blur-2xl rounded-full w-12 h-12 hover:scale-110 hover:-translate-x-7 duration-300 p-2" />
+              <FaCircleInfo className="text-xl text-zinc-200 shadow-lg backdrop-blur-2xl rounded-full w-10 h-10 hover:scale-110 hover:-translate-x-2 duration-300 p-2" />
             </li>
             <li>
-              <FaHandsHelping className="text-xl text-zinc-200 shadow-lg backdrop-blur-2xl rounded-full w-12 h-12 hover:scale-110 hover:-translate-x-7 duration-300 p-2" />
+              <FaHandsHelping className="text-xl text-zinc-200 shadow-lg backdrop-blur-2xl rounded-full w-10 h-10 hover:scale-110 hover:-translate-x-2 duration-300 p-2" />
             </li>
             <li>
-              <IoIosContact className="text-xl text-zinc-200 shadow-lg backdrop-blur-2xl rounded-full w-12 h-12 hover:scale-110 hover:-translate-x-7 duration-300 p-2" />
+              <IoIosContact className="text-xl text-zinc-200 shadow-lg backdrop-blur-2xl rounded-full w-10 h-10 hover:scale-110 hover:-translate-x-2 duration-300 p-2" />
             </li>
             <li>
-              <FaMoon className="text-xl text-zinc-200 shadow-lg backdrop-blur-2xl rounded-full w-12 h-12 hover:scale-110 hover:-translate-x-7 duration-300 p-2" />
+              <FaMoon className="text-xl text-zinc-200 shadow-lg backdrop-blur-2xl rounded-full w-10 h-10 hover:scale-110 hover:-translate-x-2 duration-300 p-2" />
             </li>
           </ul>
         </div>
